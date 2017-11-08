@@ -1,0 +1,81 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>ServiceNow Utilities</display-name>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext*.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>userUpdateServlet</servlet-name>
+		<display-name>UserUpdateServlet</display-name>
+		<description>UserUpdateServlet</description>
+		<servlet-class>edu.ucdavis.ucdh.itoc.snutil.servlets.UserUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>departmentUpdateServlet</servlet-name>
+		<display-name>DepartmentUpdateServlet</display-name>
+		<description>DepartmentUpdateServlet</description>
+		<servlet-class>edu.ucdavis.ucdh.itoc.snutil.servlets.DepartmentUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>locationUpdateServlet</servlet-name>
+		<display-name>LocationUpdateServlet</display-name>
+		<description>LocationUpdateServlet</description>
+		<servlet-class>edu.ucdavis.ucdh.itoc.snutil.servlets.LocationUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>configurationItemUpdateServlet</servlet-name>
+		<display-name>ConfigurationItemUpdateServlet</display-name>
+		<description>ConfigurationItemUpdateServlet</description>
+		<servlet-class>edu.ucdavis.ucdh.itoc.snutil.servlets.ConfigurationItemUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>purchaseOrderUpdateServlet</servlet-name>
+		<display-name>PurchaseOrderUpdateServlet</display-name>
+		<description>PurchaseOrderUpdateServlet</description>
+		<servlet-class>edu.ucdavis.ucdh.itoc.snutil.servlets.PurchaseOrderUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>userUpdateServlet</servlet-name>
+		<url-pattern>/updateuser.txt</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>departmentUpdateServlet</servlet-name>
+		<url-pattern>/updatedept.txt</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>locationUpdateServlet</servlet-name>
+		<url-pattern>/updateloc.txt</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>configurationItemUpdateServlet</servlet-name>
+		<url-pattern>/updateci.txt</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>purchaseOrderUpdateServlet</servlet-name>
+		<url-pattern>/updatepo.txt</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>
