@@ -4,7 +4,7 @@
   <groupId>edu.ucdavis.ucdh.itoc</groupId>
   <artifactId>snutil-web</artifactId>
   <packaging>war</packaging>
-  <version>1.0</version>
+  <version>1.1.1</version>
   <name>ServiceNow Utilities</name>
 
 	<properties>
@@ -337,7 +337,7 @@
 		<dependency>
 			<groupId>edu.ucdavis.ucdh.itoc</groupId>
 			<artifactId>snutil</artifactId>
-			<version>1.0</version>
+			<version>1.1.1</version>
 		</dependency>
 </dependencies>
 
