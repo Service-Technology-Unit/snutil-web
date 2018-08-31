@@ -49,6 +49,13 @@
 		<servlet-class>edu.ucdavis.ucdh.itoc.snutil.servlets.PurchaseOrderUpdateServlet</servlet-class>
 	</servlet>
 
+	<servlet>
+		<servlet-name>iamUpdateServlet</servlet-name>
+		<display-name>IamUpdateServlet</display-name>
+		<description>IamUpdateServlet</description>
+		<servlet-class>edu.ucdavis.ucdh.itoc.snutil.servlets.IamUpdateServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>userUpdateServlet</servlet-name>
 		<url-pattern>/updateuser.txt</url-pattern>
@@ -72,6 +79,11 @@
 	<servlet-mapping>
 		<servlet-name>purchaseOrderUpdateServlet</servlet-name>
 		<url-pattern>/updatepo.txt</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>iamUpdateServlet</servlet-name>
+		<url-pattern>/updateiam.txt</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
