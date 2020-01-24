@@ -18,4 +18,9 @@ target/
 # eclipse project file
 .settings/
 .classpath
+<<<<<<< HEAD
 .project
+=======
+.project
+
+>>>>>>> branch 'master' of https://github.com/Service-Technology-Unit/snutil-web.git

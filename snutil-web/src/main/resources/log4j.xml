@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
 
@@ -40,4 +41,48 @@
         <appender-ref ref="CONSOLE1" /> 
     </root>
 
+=======
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="CONSOLE1" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSSZ} %5p [%t] (%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="net.sf.ehcache">
+        <level value="ERROR"/>
+    </logger>
+
+    <logger name="org.apache">
+        <level value="WARN"/>
+    </logger>
+
+    <!-- Suppress warnings from Commons Validator -->
+    <logger name="org.apache.commons.validator.ValidatorResources">
+        <level value="ERROR"/>
+    </logger>
+
+    <!-- Suppress invalid warning messages from JSF -->
+    <logger name="org.apache.myfaces.shared_impl.renderkit.html">
+        <level value="ERROR"/>
+    </logger>
+    
+    <logger name="org.springframework">
+        <level value="WARN"/>
+    </logger>
+   
+    <logger name="edu.ucdavis">
+        <level value="DEBUG"/>
+    </logger>
+
+    <root> 
+        <priority value ="INFO" /> 
+        <appender-ref ref="CONSOLE1" /> 
+    </root>
+
+>>>>>>> branch 'master' of https://github.com/Service-Technology-Unit/snutil-web.git
 </log4j:configuration>
