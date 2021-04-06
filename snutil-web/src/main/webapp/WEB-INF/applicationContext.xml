@@ -26,6 +26,26 @@
 		<entry key="timestamp"  value="${build.timestamp}" />
 	</util:map>
 
+	<bean id="lenelServer" class="java.lang.String">
+		<constructor-arg value="${lenel.server}" />
+	</bean>
+
+	<bean id="lenelUser" class="java.lang.String">
+		<constructor-arg value="${lenel.username}" />
+	</bean>
+
+	<bean id="lenelPassword" class="java.lang.String">
+		<constructor-arg value="${lenel.password}" />
+	</bean>
+
+	<bean id="lenelDirectory" class="java.lang.String">
+		<constructor-arg value="${lenel.directory}" />
+	</bean>
+
+	<bean id="lenelApplicationId" class="java.lang.String">
+		<constructor-arg value="${lenel.application.id}" />
+	</bean>
+
 	<bean id="masterDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
 		<property name="jndiName"        value="java:comp/env/jdbc/masterdata"/>
 		<property name="lookupOnStartup" value="false"/>
@@ -56,15 +76,6 @@
 		<property name="url"               value="${util.database.url}" />
 		<property name="username"          value="${util.database.username}" />
 		<property name="password"          value="${util.database.password}" />
-		<property name="defaultAutoCommit" value="true" />
-	</bean>
-
-	<bean id="eclipsysDataSource" class="org.apache.commons.dbcp2.BasicDataSource"
-		destroy-method="close">
-		<property name="driverClassName"   value="${eclipsys.jdbc.driver}" />
-		<property name="url"               value="${eclipsys.database.url}" />
-		<property name="username"          value="${eclipsys.database.username}" />
-		<property name="password"          value="${eclipsys.database.password}" />
 		<property name="defaultAutoCommit" value="true" />
 	</bean>
 
