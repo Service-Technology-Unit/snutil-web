@@ -24,3 +24,4 @@ target/
 .project
 
 >>>>>>> branch 'master' of https://github.com/Service-Technology-Unit/snutil-web.git
+/bin/
